@@ -14,4 +14,4 @@ const handleGreeting = ({params, country}, response) =>{
     
 }
 
-export default handleGreeting
+module.exports = handleGreeting

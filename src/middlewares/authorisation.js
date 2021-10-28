@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 
 const authorisationMiddleware = async (req, res, next) => {
     const authorisation = req.headers.authorization
@@ -13,7 +13,11 @@ const authorisationMiddleware = async (req, res, next) => {
                 error: 'invalid token'
             })
         }
+    } else {
+        res.send({
+            error: 'Invalid token'
+        })
     }
 }
 
-export default authorisationMiddleware
+module.exports = authorisationMiddleware

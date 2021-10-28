@@ -24,4 +24,4 @@ const handleLogin = (req, res) => {
     }
 }
 
-export default handleLogin
+module.exports = handleLogin
